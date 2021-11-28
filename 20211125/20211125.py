@@ -1,7 +1,6 @@
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-
 
 df = pd.read_csv("20211125_exam.csv")
 for i in range(4):
