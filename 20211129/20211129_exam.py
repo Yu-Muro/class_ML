@@ -16,16 +16,16 @@ def linear_regression(n):
 
     model_A = sklearn.linear_model.LinearRegression()
     model_A.fit(X, ya)
-    print( 'coefficient_A:', model_A.coef_, ' intercept_A', model_A.intercept_ )
+    print("coefficient_A:{}\nintercept_A{}".format(model_A.coef_, model_A.intercept_))
     Ea = mse(n, config.x, ya, model_A)
-    print("mean squared error of a {:.10f}".format(Ea))
+    print("mean squared error of a:{:.10f}".format(Ea))
     print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
 
     model_B = sklearn.linear_model.LinearRegression()
     model_B.fit(X, yb)
-    print( 'coefficient_B:', model_B.coef_, ' intercept_B', model_B.intercept_ )
+    print("coefficient_B:{}\nintercept_B{}".format(model_B.coef_, model_B.intercept_))
     Eb = mse(n, config.x, yb, model_B)
-    print("mean squared error of b {:.10f}".format(Eb))
+    print("mean squared error of b:{:.10f}".format(Eb))
 
     folder = os.listdir()
     if "figure" not in folder:
